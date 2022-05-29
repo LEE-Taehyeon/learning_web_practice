@@ -1,0 +1,135 @@
+<!--
+    display property
+        - block / inline / inline-block / none
+        1) block
+            - 항상 새로운 라인에서 시작
+            - 화면 크기 전체의 가로폭 지정
+            - width, height, margin, padding 프로퍼티 지정가능
+            - block 레벨 요소내 inline 레벨 요소 포함가능
+        2) inline
+            - 새로운 라인에서 시작하지 않으며 문장의 중간에 들어갈 수 있다. 즉, 줄바꿈을 하지 않고 다른 요소와 함께 한 행에 위치
+            - content 너비만큼 가로폭을 차지
+            - width, height, margin 프로퍼티를 지정할 수 없다.(padding 은 가능)
+            - inline 레벨 요소 내에서 block 레벨 요소를 포함할 수 없다.
+            - inline 레벨 요소는 일반적으로 block 레벨 요소에 포함되어 사용된다.
+        3) inline-block
+            - block과 inline 레벨 요소의 특징을 모두 갖는다.
+            - inline 레벨 요소와 같이 한 줄에 표현되면서 block 레벨 요소처럼 width, height, margin 프로퍼티를 모두 지정할 수 있다.
+            - 기본적으로 inline 레벨 요소와 흠사하게 줄을 바꾸지 않고 다른 요소와 함께 한 행에 위치시킬 수 있다.
+            - content 너비만큼 가로폭 차지
+        4) none
+            - 해당요소를 화면에 표시하지 않는다.(공간조차 사라짐)
+    
+    visibility property
+        - visible / hidden / collapse / none
+        1) visible : 해당요소를 보이게 한다(기본값)
+        2) hidden : 해당요소를 보이지 않게 한다. 단, none 은 해당요소의 공간까지 사라지게 하지만, hidden 은 해당요소의 공간은 사라지지 않고 남아있다.
+        3) collapse : table 요소에 사용하며 행이나 열을 보이지 않게 한다.
+        4) nono : table 요소의 row나 column 을 보이지 않게한다. 크롬에서는 hidden 과 동일하게 동작
+
+    opacity property : 투명도를 정의(0.0 ~ 1.0), 0.0:투명 / 1.0:불투명
+
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Page</title>
+        <style>
+            div, span {
+                border: 3px solid brown;
+                width: 250px;
+                height: 150px;
+                /* 넘친 컨텐츠를 감출 수 있다. 단, 감춰진 컨텐츠는 볼 수 없다.(스크롤 안됨) */
+                overflow: hidden;
+            }
+            #border_radius {
+                border-radius: 15px 30px;
+                /* 모서리를 둥글게 */
+
+            }
+            a {
+                text-decoration: none;
+            }
+
+            #content_box {
+                width: 500px;
+                height: 300px;
+            }
+            #border_box {
+                box-sizing: border-box;
+                /* 기본적으로 content-box 사이즈인데, box-sizing: border-box 를 설정하면 border 의 크기를 조절할 수 있다. */
+                width: 500px;
+                height: 300px;
+            }
+            
+            table, td {
+                border: 3px dotted blue;
+            }
+            #collapse {
+                visibility: collapse;
+            }
+
+            img {
+                opacity: 0.3;
+                transition: opacity 2s;
+            }
+            img:hover {
+                opacity: 1.0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>WEB</h1>
+        <p>
+            <a href="https://www.naver.com/" target="_blank">NAVER</a>
+        </p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <span>display property - inline1</span>
+        <span>display property - inline2</span><span>display property - inline3</span>
+
+        <hr>
+        <div id="content_box">
+            content box
+            <span>block_in_inline_property1</span>
+            <span>block_in_inline_property2</span>
+            <span>block_in_inline_property3</span>
+        </div>
+        <hr>
+        <div id="border_box">border box</div>
+        <hr>
+        <!-- 가로줄 -->
+        <div id="border_radius">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <ol>
+            <li><img src="../python_img.png" width="100px">Python</li>
+            <li>JAVA</li>
+            <li>React</li>
+        </ol>
+
+        <table>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+            </tr>
+
+            <h2>12 &lt; 334</h2>
+            <h2>12 &gt; 334</h2>
+            
+            <tr id="collapse">
+                <td>C</td>
+                <td>D</td>
+            </tr>
+        </table>
+    </body>
+</html>

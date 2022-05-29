@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Array</h1>
+        <script>
+            var coworkers = ["egoing", "leezche"];
+        </script>
+        
+        <h3>Array get</h3>
+        <script>
+            document.write(coworkers[0]);
+        </script>
+
+        <h3>Array count</h3>
+        <script>
+            document.write(coworkers.length);
+        </script>
+
+        <h3>Array add</h3>
+        <script>
+            coworkers.push('duru');
+            coworkers.push('taeho');
+            document.write(coworkers.length);
+        </script>
+
+
+        <hr>
+        <h1>Array & Loop</h1>
+        <ul>
+            <script>
+                var coworkers = ['egoing', 'leezche', 'duru', 'taeho', 'graphittie'];
+                for (var i = 0; i < coworkers.length; i++) {
+                    document.write('<li>' + coworkers[i] + '</li>');
+                }
+            </script>
+        </ul>
+    </body>
+</html>

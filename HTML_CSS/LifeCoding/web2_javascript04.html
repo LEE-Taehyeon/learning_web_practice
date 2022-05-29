@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        // 중복된 코드 정리
+        // 객체(이름이 있는 정리정돈 상자)에 속한 함수는 메소드라 칭한다.
+        // document : 객체 / querySelector : document 객체에 속한 메소드
+        function setAllClassValue(classHandler, value) {
+            for(var i = 0; i < classHandler.length; i++) {
+                classHandler[i].value = value;
+            }
+        }
+
+        function setTagColor(selector, color) {
+            var a_list = document.querySelectorAll(selector);
+                for(var i = 0; i < a_list.length; i++) {
+                    a_list[i].style.color = color;
+                }
+        }
+
+        function setBodyColor(target, color, backColor) {
+            target.style.color = color;
+            target.style.backgroundColor = backColor;
+        }
+
+        function setFontSize(className, size) {
+            var li_list = document.querySelectorAll(className);
+            for(var i = 0; i < li_list.length; i++) {
+                li_list[i].style.fontSize = size;
+            }
+        }
+
+        function nightDayHandler(self) {
+            var target = document.querySelector('body');
+            var classHandler = document.querySelectorAll('.nightDayHandlerClass')
+
+            if (self.value === 'night') {
+                setBodyColor(target, 'white', 'black');
+                setAllClassValue(classHandler, 'day');
+                setTagColor('a', 'yellow')
+                setFontSize('.font_size_change', '50px')
+            } else {
+                setBodyColor(target, 'black', 'white');
+                setAllClassValue(classHandler, 'night');
+                setTagColor('a', 'blue')
+                setFontSize('.font_size_change', '15px')
+            }
+        }
+
+        // 중복된 코드 정리하기 전
+        /*
+        function nightDayHandler(self) {
+            var target = document.querySelector('body');
+            var classHandler = document.querySelectorAll('.nightDayHandlerClass')
+            if (self.value === 'night') {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+
+                // 버튼이 여러개 생기면 클릭된 버튼의 속성값만 변하기 때문에 중복 적용이 되지 않는다.
+                // self.value = 'day';
+
+                // 따라서 이렇게 작성해야 중복적용 가능
+                for(var i = 0; i < classHandler.length; i++) {
+                    classHandler[i].value = 'day'
+                }
+                
+    
+                var a_list = document.querySelectorAll('a');
+                for(var i = 0; i < a_list.length; i++) {
+                    a_list[i].style.color = 'yellow';
+                }
+    
+                var li_list = document.querySelectorAll('.font_size_change');
+                for(var i = 0; i < li_list.length; i++) {
+                    li_list[i].style.fontSize = '50px';
+                }
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+
+                // self.value = 'night';
+
+                for(var i = 0; i < classHandler.length; i++) {
+                    classHandler[i].value = 'night'
+                }
+    
+                var a_list = document.querySelectorAll('a');
+                for(var i = 0; i < a_list.length; i++) {
+                    a_list[i].style.color = 'blue';
+                }
+    
+                var li_list = document.querySelectorAll('.font_size_change');
+                for(var i = 0; i < li_list.length; i++) {
+                    li_list[i].style.fontSize = '15px';
+                }
+            }
+        }
+        */
+        
+    
+    </script>
+    <title>toggle functions</title>
+</head>
+
+<body>
+    <input class="nightDayHandlerClass" type="button" value="night" onclick="nightDayHandler(this)">
+    <input class="nightDayHandlerClass" type="button" value="night" onclick="nightDayHandler(this)">
+    <input class="nightDayHandlerClass" type="button" value="night" onclick="nightDayHandler(this)">
+    <input class="nightDayHandlerClass" type="button" value="night" onclick="nightDayHandler(this)">
+
+    <ul>
+        <li><a href="http:\\www.naver.com">NAVER</a></li>
+        <li><a href="http:\\www.google.com">Google</a></li>
+        <li><a href="http:\\www.kakao.com">Kakao</a></li>
+    </ul>
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </p>
+    <ol>
+        <li class="font_size_change"><img src="../python_img.png" width="100px">Python</li>
+        <li class="font_size_change">JAVA</li>
+        <li class="font_size_change">React</li>
+    </ol>
+</body>
+
+</html>

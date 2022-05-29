@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        // 중복된 코드 정리
+        // 객체(이름이 있는 정리정돈 상자)에 속한 함수는 메소드라 칭한다.
+        // document : 객체 / querySelector : document 객체에 속한 메소드
+
+        // 함수를 객체(Body)의 메소드로 선언
+        var Body = {
+            setAllClassValue : function (classHandler, value) {
+                for(var i = 0; i < classHandler.length; i++) {
+                    classHandler[i].value = value;
+                }
+            },
+            setTagColor : function (selector, color) {
+                var a_list = document.querySelectorAll(selector);
+                    for(var i = 0; i < a_list.length; i++) {
+                        a_list[i].style.color = color;
+                    }
+            },
+            setBodyColor : function (target, color, backColor) {
+                target.style.color = color;
+                target.style.backgroundColor = backColor;
+            },
+            setFontSize : function (className, size) {
+                var li_list = document.querySelectorAll(className);
+                for(var i = 0; i < li_list.length; i++) {
+                    li_list[i].style.fontSize = size;
+                }
+            }
+        }
+
+        function nightDayHandler(self) {
+            var target = document.querySelector('body');
+            var classHandler = document.querySelectorAll('.nightDayHandlerClass');
+
+            if (self.value === 'night') {
+                Body.setBodyColor(target, 'white', 'black');
+                Body.setAllClassValue(classHandler, 'day');
+                Body.setTagColor('a', 'yellow');
+                Body.setFontSize('.font_size_change', '50px');
+            } else {
+                Body.setBodyColor(target, 'black', 'white');
+                Body.setAllClassValue(classHandler, 'night');
+                Body.setTagColor('a', 'blue');
+                Body.setFontSize('.font_size_change', '15px');
+            }
+        }
+        
+    
+    </script>
+    <title>toggle functions</title>
+</head>
+
+<body>
+    <input class="nightDayHandlerClass" type="button" value="night" onclick="nightDayHandler(this)">
+    <input class="nightDayHandlerClass" type="button" value="night" onclick="nightDayHandler(this)">
+    <input class="nightDayHandlerClass" type="button" value="night" onclick="nightDayHandler(this)">
+    <input class="nightDayHandlerClass" type="button" value="night" onclick="nightDayHandler(this)">
+
+    <ul>
+        <li><a href="http:\\www.naver.com">NAVER</a></li>
+        <li><a href="http:\\www.google.com">Google</a></li>
+        <li><a href="http:\\www.kakao.com">Kakao</a></li>
+    </ul>
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </p>
+    <ol>
+        <li class="font_size_change"><img src="../python_img.png" width="100px">Python</li>
+        <li class="font_size_change">JAVA</li>
+        <li class="font_size_change">React</li>
+    </ol>
+</body>
+
+</html>

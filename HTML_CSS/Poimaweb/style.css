@@ -1,0 +1,21 @@
+/* 복수개의 셀렉터 연속지정 - , 로 연결 */
+h1, p {
+    color: purple;
+}
+
+/* 전체 셀렉터 : '*' */
+/* * {
+    color : #ff0000;
+} */
+
+/* id 어트리뷰트에 적용 */
+#p1 {
+    color : white;
+    background-color: black;
+}
+
+/* class 어트리뷰트에 적용 */
+/* .container {
+    color : blue;
+    background-color: yellow;
+} */

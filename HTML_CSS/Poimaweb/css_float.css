@@ -1,0 +1,25 @@
+#first_div {
+    text-align: left;
+    border: 3px dotted blue;
+}
+
+#second_div {
+    text-align: center;
+    border: 3px solid red;
+
+}
+
+#third_div {
+    text-align: right;
+    border: 3px dotted yellow;
+
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* 
+div {
+    float: left;
+} */

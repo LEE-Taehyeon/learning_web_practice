@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            h1 { /* block level element */
+                border: 5px;
+                border-color: red;
+                border-style: solid;
+                display: inline; /* inline element 로 변경 가능 */
+            }
+            a { /* inline element */
+                border: 5px;
+                border-color: red;
+                border-style: solid;
+                display: block; /* block element 로 변경 가능 */
+            }
+            
+            /* 위 두개의 선택자는 중복이다. 이를 , 로 이어서 작성하면 된다. */
+            h1, a {
+                /*
+                border: 5px;
+                border-color: red;
+                border-style: solid;
+
+                border 중복도 싫다.
+                */
+                border: 5px solid red;
+                /* display: inline; /* inline element 로 변경 가능 */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS</h1> <!-- h1 태그는 화면전체( : block 이라고 부른다.)를 사용한다. -->
+        Cascading Style Sheets (<a href="https://www.w3schools.com/css/">CSS</a>) <!-- a 태그는 자기자신의 컨텐츠 부피만큼만 사용한다. -->
+        is a style sheet language used for describing
+        the presentation of a document written in a markup language
+    </body>
+</html>
