@@ -1,0 +1,71 @@
+p {
+    color: red;
+}
+
+/* id 셀렉터 */
+#p2 {
+    background-color: black;
+    color: white;
+}
+
+/* class 셀렉터 */
+.first_class {
+    color: blue;
+}
+
+/*
+    CSS 적용 우선순위
+    1) 속성값 뒤에 !import 붙인 것
+    2) HTML 에서 style 을 직접 지정한 속성
+    3) #id 로 지정
+    4) .클래스, :추상클래스로 지정
+    5) 태그이름으로 지정
+    6) 상위 객체에 의해 상속된 속성
+*/
+
+/* 어트리뷰트가 href 인 것에 적용 */
+a[href] {
+    color: yellow;
+    background-color: black;
+}
+
+#li1 {
+    color:aqua;
+}
+
+
+/* div 자식인 ul, ol 의 자식인 li 에 적용 */
+div > ul, ol > li {
+    color: red;
+}
+
+
+/* ul 형제 요소중 뒤에 오는 모든 h2 요소에만 적용 */
+ul ~ h2 {
+    background-color: blue;
+    color: red;
+}
+
+/* ul 형제 요소중 바로 뒤에 오는 h2 요소에만 적용 */
+ul + h2 {
+    background-color: red;
+    color: blue;
+}
+
+/*
+    가상 클래스 셀렉터
+    selector:pseudo-class {}
+ */
+a:link {
+    color: yellow;
+    background-color: black;
+}
+a:hover {
+    color: saddlebrown;
+    background-color: blue;
+}
+a:visited {
+    color: rgb(194, 16, 185);
+    background-color: rgb(12, 216, 155);
+}
+
