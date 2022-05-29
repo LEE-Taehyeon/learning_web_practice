@@ -1,0 +1,72 @@
+:root{
+    --color-balck: black;
+    --color-blue: rgb(147, 147, 247);
+    --color-green: rgb(111, 224, 126);
+    --color-yellow: rgb(230, 233, 73);
+    --color-orange: rgb(238, 107, 59);
+
+    --size-logo: 100px;
+    --size-border: 45px;
+    --size-space: 20px;
+    --size-font: 15px;
+    --size-radius: 5px;
+
+    --animation-duration: 300ms;
+}
+
+body {
+    background-image: url("../img/natural.png");
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main-frame {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#logo {
+    width: var(--size-logo);
+    height: var(--size-logo);
+    margin-top: var(--size-space);
+    margin-bottom: var(--size-space);
+}
+
+.buttons {
+    text-align: center;
+    transition: transform var(--animation-duration) ease;
+}
+
+.btn {
+    cursor: pointer;
+    padding: var(--size-space);
+    font-size: var(--size-font);
+    border-radius: var(--size-radius);
+    border: none;
+    outline: none;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.poketmons {
+    background-color: var(--color-blue);
+}
+
+.info {
+    background-color: var(--color-green);
+}
+
+.property {
+    background-color: var(--color-yellow);
+}
+
+.etc {
+    background-color: var(--color-orange);
+}
+
