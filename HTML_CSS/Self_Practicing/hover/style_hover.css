@@ -3,9 +3,11 @@
     height: 50px;
     background-color: red;
     border: 1px solid red;
-    transition: 0.3s
+    opacity: 0.5;
+    transition: 0.5s
 }
 
 .hover_test:hover {
     width: 400px;
+    opacity: 1.0;
 }
