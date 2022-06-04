@@ -1,6 +1,6 @@
 const click = document.getElementById("click_btn");
-const beforeClickBgColor = "blue";
-const afterClickBgColor = "red";
+const beforeClickColor = "blue";
+const afterClickColor = "red";
 
 let btn = true;
 
@@ -10,10 +10,12 @@ function btnClick(event) {
     if (btn) {
         btn = false;
         click.innerHTML = "Revert";
-        click.style.backgroundColor = afterClickBgColor;
+        click.style.backgroundColor = afterClickColor;
+        click.style.border = afterClickColor;
     } else {
         btn = true;
         click.innerHTML = "Click";
-        click.style.backgroundColor = beforeClickBgColor;
+        click.style.backgroundColor = beforeClickColor;
+        click.style.border = beforeClickColor;
     }
 }
