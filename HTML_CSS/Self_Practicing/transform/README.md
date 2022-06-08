@@ -12,10 +12,26 @@
     | transform: translateY()    | translateY(거리) 함수는 상하(수직방향)의 이동거리 값을 지정한다.    |
     | transform: translateZ()    | translateZ(거리) 함수는 Z 방향의 거리로 이동을 지정한다. 이 함수는 백분율 값으로 지정할 수 없으며, 백분율 값으로 지정해도 '0'이 된다.   |
     
-    2. scale() https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale
-    3. skew()
-    4. rotate
-    5. complex
+    2. scale() 
+        | scale() 속성    |  |
+        | --- | --- |
+        | transform: scale()    | scale(0.X, 0.Y) 함수는 X 만큼 수평방향, Y 만큼 수직방향 으로 크기를 늘리거나 줄인다.    |
+        | transform: scaleX()    | scaleX(배율) 함수는 좌우(수평방향)로의 크기를 지정한만큼 늘리거나 줄인다.    |
+        | transform: scaleY()    | scaleY(배율) 함수는 상하(수직방향)로의 크기를 지정한만큼 늘리거나 줄인다.    |
+    
+    4. skew()
+        | skew() 속성    |  |
+        | --- | --- |
+        | transform: skew()    | skew(deg, deg) 함수는 X 만큼 수평방향, Y 만큼 수직방향 으로 해당 요소를 비틀어 왜곡한다.    |
+        | transform: skew()    | skew(각도) 함수는 좌우(수평방향)로의 크기를 지정한만큼 해당 요소를 비틀어 왜곡한다.    |
+        | transform: skew()    | skew(각도) 함수는 상하(수직방향)로의 크기를 지정한만큼해당 요소를 비틀어 왜곡한다.    |
+    6. rotate()
+        | rotate() 속성    |  |
+        | --- | --- |
+        | transform: rotate()    | rotate(deg, deg) 함수는 X 만큼 수평방향, Y 만큼 수직방향 으로 해당 요소를 회전시킨다.    |
+        | transform: rotate()    | rotate(각도) 함수는 좌우(수평방향)로의 크기를 지정한만큼 해당 요소를 비틀어 회전시킨다.    |
+        | transform: rotate()    | rotate(각도) 함수는 상하(수직방향)로의 크기를 지정한만큼해당 요소를 비틀어 회전시킨다.    |
+    
     
     6. transform-origin : 요소의 기준점을 설정할 때 사용. 기본기준점은 요소의 정중앙이다(50%, 50%)
 ## 표넣기
