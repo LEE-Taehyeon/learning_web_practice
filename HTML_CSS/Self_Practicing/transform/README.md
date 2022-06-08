@@ -4,10 +4,14 @@
     - 트랜지션은 CSS 스타일 변경을 부드럽게 표현하기 위해 duration(지속시간)을 부여하여 속도를 조절한다.
     - 트랜스폼(Transform) 은 요소에 이동(translate), 회전(rotate), 확대축소(scale), 비틀기(skew) 효과를 부여하기 위한 함수를 제공. 단, 애니메이션 효과를 제공하지는 않기 때문에 정의된 프로퍼티가 바로 적용되어 화면에 표시된다.
 
-|     |     |     |     |     |
-| --- | --- | --- | --- | --- |
-|     |     |     |     |     |
-    1. translate(x, y) : https://www.tabmode.com/homepage/transform-translate.html#:~:text=%E3%80%90CSS%E3%80%91transform%20%EC%86%8D%EC%84%B1%20%3A%20%EC%9A%94%EC%86%8C,%EC%9C%84%EC%B9%98%EB%A5%BC%20%EC%9D%B4%EB%8F%99%EC%8B%9C%ED%82%A4%EB%8A%94%20translate&text=%EA%B7%B8%20%EC%A4%91%20translate%20()%20%ED%95%A8%EC%88%98,%EC%9D%B4%EB%8F%99%EC%8B%9C%ED%82%AC%20%EB%95%8C%20%EC%82%AC%EC%9A%A9%ED%95%A9%EB%8B%88%EB%8B%A4. 참고해서 표그리기.
+    1. translate(x, y) : 
+    | translate() 속성    |
+    | --- | --- |
+    | transform: translate()    | translate(X, Y) 함수는 요소를 왼쪽에서부터 X 거리, 위에서부터 Y 거리만큼 상대적으로 위치를 정하거나, 이동 및 재배치를 지정합니다. Y 방향의 거리는 생략 할 수 있지만, 이 경우의 Y 방향의 거리는 '0'이 된다.    |
+    | transform: translateX()    | translateX(거리) 함수는 좌우(수평방향)의 이동거리 값을 지정한다.    |
+    | transform: translateY()    | translateY(거리) 함수는 상하(수직방향)의 이동거리 값을 지정한다.    |
+    | transform: translateZ()    | translateZ(거리) 함수는 Z 방향의 거리로 이동을 지정한다. 이 함수는 백분율 값으로 지정할 수 없으며, 백분율 값으로 지정해도 '0'이 된다.   |
+    
     2. scale() https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale
     3. skew()
     4. rotate
