@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Transform</title>
+    <style>
+        .box {
+            width: 95px;
+            height: 95px;
+            line-height: 95px;
+            text-align: center;
+            border-radius: 6px;
+        }
+        .original {
+            margin: 30px;
+            border: 1px dashed #cecfd5;
+            background: #eaeaed;
+            float: left;
+        }
+        .child {
+            background: #2db34a;
+            cursor: pointer;    
+        }
+        .translate {
+            transform: translate(10px, 50px);
+        }
+        .translate:hover {
+            transition: transform 1s linear;
+            transform: translate(0px, 0px);
+        }
+        .scale {
+            transform: scale(0.75);
+        }
+        .scale:hover {
+            transition: transform 1s linear;
+            transform: scale(1.0);
+        }
+        .skew {
+            transform: skew(5deg, -20deg);
+        }
+        .skew:hover {
+            transition: transform 1s linear;
+            transform: skew(0, 0);
+        }
+        .rotate {
+            transform: rotate(70deg);
+        }
+        .rotate:hover {
+            transition: transform 1s linear;
+            transform: rotate(0);
+        }
+        .complex {
+            transform: scale(0.6) skew(10deg, -30deg);
+        }
+        .complex:hover {
+            transition: transform 1s linear;
+            transform: scale(1.0) skew(0, 0);
+        }
+
+        .scale1:hover {
+            transition: transform 1s linear;
+            transform-origin: 0 0;
+            transform: scale(0.5);
+        }
+        .scale2:hover {
+            transition: transform 1s linear;
+            transform-origin: 50% 50%;
+            transform: scale(0.5);
+        }
+        .scale3:hover {
+            transition: transform 1s linear;
+            transform-origin: 100% 100%;
+            transform: scale(0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="original box">
+        <div class="child box translate">translate</div>
+    </div>
+    <div class="original box">
+        <div class="child box scale">scale</div>
+    </div>
+    <div class="original box">
+        <div class="child box skew">skew</div>
+    </div>
+    <div class="original box">
+        <div class="child box rotate">rotate</div>
+    </div>
+    <div class="original box">
+        <div class="child box complex">complex</div>
+    </div>
+
+    <div class="original box">
+        <div class="child box scale1">scale1</div>
+    </div>
+    <div class="original box">
+        <div class="child box scale2">scale2</div>
+    </div>
+    <div class="original box">
+        <div class="child box scale3">scale3</div>
+    </div>
+
+</body>
+</html>
