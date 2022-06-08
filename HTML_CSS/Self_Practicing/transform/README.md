@@ -35,5 +35,4 @@
     
     5. transform-origin : 요소의 기준점을 설정할 때 사용. 기본기준점은 요소의 정중앙이다(50%, 50%)
 
-
-    - line-height : line-box 의 높이를 설정하는 CSS 속성. 일반적으로 텍스트 줄 사이의 거리를 설정.
+2. line-height : line-box 의 높이를 설정하는 CSS 속성. 일반적으로 텍스트 줄 사이의 거리를 설정.
